@@ -1,75 +1,15 @@
-/* Reset */
-
-body {
-  margin: 0;
-}
-
-blockquote,
-pre,
-ol,
-ul,
-figure {
-  padding: 0;
-  margin: 0;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  height: auto;
-  border: none;
-}
-
-article,
-aside,
-figure,
-footer,
-header,
-aside,
-main,
-nav {
-  display: block;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-/* Typography */
-
-body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  color: #222;
-  background-color: #fafafa;
-  font: 400 14px/1.625 -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol;
-  font-size: calc(14px + (20 - 14) * (100vw - 320px) / (750 - 320));
-}
-
-@media (min-width: 750px) {
-  body {
-    font-size: 20px;
+@font-face {
+  font-family: VaultAlarm-Regular;
+  src: url(fonts/VaultAlarm-Regular.woff2);
   }
-}
 
-a {
-  color: #2ab591;
-}
+@font-face {
+  font-family: SpaceMono-Regular;
+  src: url(fonts/SpaceMono-Regular.woff2);
+  }
 
-code {
-  font-size: 0.9em;
-}
-
-/* Grid */
-
-.wrapper {
-  max-width: 800px;
-  padding: 20px;
-  margin: 0 auto;
+* {
+  box-sizing: border-box;
 }
 
 /* Header */
@@ -93,4 +33,604 @@ code {
 
 [role='contentinfo'] .deploy {
   max-width: 40%;
+}
+
+
+:root {
+  --size-300: 0.9rem;
+  --size-400: 1.15rem;
+  --size-500: 1.28rem;
+  --size-600: 1.45rem;
+  --size-700: 1.8rem;
+  --size-800: 2.0rem;
+  --size-900: 2.5rem;
+  --primary: black;
+  --secondary: #00A3E6;
+}
+
+
+
+a:not([class]) {
+  color: currentColor;
+}
+
+:focus {
+  outline: 2px dashed;
+  outline-offset: 0.25rem;
+}
+
+main:focus {
+
+}
+
+
+[href]:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #999;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
+    helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  line-height: 1.3;
+}
+
+h1,
+h2 {
+  font-weight: 800;
+}
+
+h1 {
+  font-size: var(--size-700);
+}
+
+h2 {
+  font-size: var(--size-600);
+}
+
+h3 {
+  font-size: var(--size-600);
+}
+ 
+P {
+ font-size: var(--size-500);
+}
+
+svg {
+  width: 100%;
+}
+
+text {
+	font-family: VaultAlarm-Regular,sans-serif;
+	font-weight: 800;
+	transform: scale(1.2, 1.8);
+}
+
+img {
+  max-width: 50rem;
+}
+
+figcaption {
+  font-size: var(--size-300);
+
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+blockquote {
+  padding-left: var(--size-600);
+  border-left: 5px solid;
+  font-style: italic;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.99);
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1.2em);
+}
+
+p,
+li {
+  max-width: 60ch;
+  font-size: var(--size-400);
+}
+
+mono {
+  max-width: 60ch;
+  font-size: var(--size-300);
+  font-family: SpaceMono-Regular,monospace;
+}
+
+h1 {
+  max-width: 60ch;
+}
+
+h2,
+h3 {
+  max-width: 60ch;
+}
+
+.post {
+  --flow-space: var(--size-700);
+
+  width: 90vw;
+  width: clamp(16rem, 90vw, 70rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.post time {
+  --flow-space: var(--size-400);
+  display: block;
+}
+
+.post :is(h2, h3) {
+  --flow-space: var(--size-900);
+}
+
+.post :is(h2, h3) + * {
+  --flow-space: var(--size-400);
+}
+
+.post figure,
+.post figure + * {
+  --flow-space: var(--size-900);
+}
+
+@media (min-width: 45em) {
+  h1 {
+    font-size: var(--size-900);
+  }
+
+  h2 {
+    font-size: var(--size-700);
+  }
+
+  p {
+    font-size: var(--size-500);
+  }
+	
+mono {
+  max-width: 60ch;
+  font-size: var(--size-300);
+  font-family: SpaceMono-Regular,monospace;
+}
+
+  figcaption {
+    font-size: var(--size-400);
+  }
+
+  blockquote p {
+    font-size: var(--size-600);
+    max-width: 40ch;
+  }
+
+  .post time {
+    font-size: var(--size-600);
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  --border: 4px solid black;
+  --padding: calc(0.5rem * 1.4);
+  --border-thick: 0px;
+  padding: 0rem;
+  margin: 0;
+
+}
+
+hr {
+  border: none;
+  border-bottom: 4px solid black;
+  
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.wrapper {
+  border-width: var(--border-thick);
+  border: var(--border-thick) solid;
+  padding: var(--padding);
+}
+
+
+
+/* Box
+-----------------------------------------------------------------------*/
+.box {
+  display: block;
+  max-width: 100vw;
+  padding: var(--padding);
+  border-width: var(--border-thick);
+  border: var(--border-thick) solid;
+  /* ↓ For high contrast mode */
+  outline: var(--border-thick) solid transparent;
+  outline-offset: calc(var(--border-thick) * -1);
+}
+
+/* The Stack
+-----------------------------------------------------------------------*/
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  --space: 1.5rem;
+}
+
+.stack > * + * {
+  margin-top: var(--space);
+}
+
+/* The Center
+-----------------------------------------------------------------------*/
+.center {
+  box-sizing: content-box;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60ch;
+  /* ↓ Intrinsic Centering: That is, centering elements based on their natural, content-based widths. */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+
+  /* ↓ Gutters (i.e. 1em) */
+  /* padding-left: 1em;
+  padding-right: 1em; */
+}
+
+/* The Cluster
+-----------------------------------------------------------------------*/
+.cluster {
+  --space: 1rem;
+  overflow: hidden;
+}
+
+.cluster > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: calc(var(--space) / 2 * -1);
+}
+
+.cluster > * > * {
+  margin: calc(var(--space) / 2);
+}
+
+/* The Sidebar
+-----------------------------------------------------------------------*/
+
+/* ↓ targets the intermediary wrapper */
+.sidebar {
+  overflow: hidden;
+  --space: 1em;
+  --side-width: 33%;
+  --content-min: 50%;
+}
+
+.sidebar > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc((var(--space) / 2) * -1);
+}
+
+.sidebar > * > * {
+  flex-basis: var(--side-width);
+  flex-grow: 1;
+  /* ↓ applies to both elements */
+  margin: calc((var(--space) / 2));
+}
+
+/* ↓ if is a right sidebar (side: right) -> :first-child */
+.sidebar > * > :last-child {
+  /* ↓ grow from nothing */
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(var(--content-min) - var(--space));
+}
+
+/* The Switcher
+-----------------------------------------------------------------------*/
+.switcher {
+  --threshold: 30rem;
+  --space: 1rem;
+  --large: calc(1 + 7 / 10);
+}
+
+.switcher > * {
+  display: flex;
+  flex-wrap: wrap;
+  /* ↓ Multiply by -1 to make negative */
+  margin: calc(var(--space) / 2 * -1);
+}
+
+.switcher > * > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--threshold) - (100% - var(--space))) * 999);
+  /* ↓ Half the value to each element, combining to make the whole */
+  margin: calc(var(--space) / 2);
+}
+
+/* .switcher > * > :nth-child(1) {
+  flex-grow: var(--large);
+} */
+
+.switcher > * > :nth-last-child(n + 4),
+.switcher > * > :nth-last-child(n + 4) ~ * {
+  flex-basis: 100%;
+}
+
+/* The Cover
+-----------------------------------------------------------------------*/
+.cover {
+  --padding: 1rem;
+  --min-height: 50vh;
+  --space: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: var(--min-height);
+  /* ↓ noPad padding: 0; */
+  padding: var(--padding);
+}
+
+.cover > * {
+  margin-top: var(--space);
+  margin-bottom: var(--space);
+}
+
+/* ↓ h2 is the centered selector but can be any selector */
+.cover > :first-child:not(h2) {
+  margin-top: 0;
+}
+
+.cover > :last-child:not(h2) {
+  margin-bottom: 0;
+}
+
+/* ↓ h2 is the centered selector but can be any selector */
+.cover > h2 {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* The Grid
+-----------------------------------------------------------------------*/
+.grid {
+  --min: 15rem;
+  --space: 1rem;
+  align-content: start;
+  display: grid;
+  gap: var(--space);
+  grid-template-columns: 100%;
+}
+
+/* needs javascript for when the container size is wider than the grid width */
+.grid.aboveMin {
+  grid-template-columns: repeat(auto-fit, minmax(var(--min), 1fr));
+}
+
+/* The Frame
+-----------------------------------------------------------------------*/
+.frame {
+  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  position: relative;
+}
+
+.frame916 {
+  --n: 9;
+  --d: 16;
+}
+
+.frame43 {
+  --n: 3;
+  --d: 4;
+}
+
+.frame-square {
+  --n: 1;
+  --d: 1;
+}
+
+.frame > * {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame > img,
+.frame > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The Reel
+-----------------------------------------------------------------------*/
+
+.reel {
+  --space: 1rem;
+  --itemWidth: auto;
+  --height: auto;
+  --trackColor: lightcoral;
+  --thumbColor: #fff;
+  display: flex;
+  /* ↓ For images, which may be very large or use differing aspect ratios, we may want to set the Reel’s height. */
+  height: var(--height);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-color: var(--thumbColor) var(--trackColor);
+}
+
+.reel::-webkit-scrollbar {
+  height: 1rem;
+}
+
+.reel::-webkit-scrollbar-track {
+  background-color: var(--trackColor);
+}
+
+.reel::-webkit-scrollbar-thumb {
+  background-color: var(--trackColor);
+  background-image: linear-gradient(
+    var(--trackColor) 0,
+    var(--trackColor) 0.25rem,
+    var(--thumbColor) 0.25rem,
+    var(--thumbColor) 0.75rem,
+    var(--trackColor) 0.75rem
+  );
+}
+
+.reel > * {
+  flex: 0 0 var(--itemWidth);
+}
+
+.reel > img {
+  height: 100%;
+  flex-basis: auto;
+  width: auto;
+}
+
+.reel > * + * {
+  margin-left: var(--space);
+}
+
+.reel.overflowing {
+  padding-bottom: var(--space);
+}
+
+
+
+/* Header Logo (style as h2) */
+header > em {
+	display: block;
+	font-size: 2em;
+	margin: .67em 0;
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* Header Nav */
+header nav ul {
+	padding: 0;
+	list-style: none;
+}
+
+header nav ul :first-child {
+	margin-left: 0;
+}
+
+header nav li {
+	display: inline-block;
+	margin: 0 .25em;
+}
+
+header nav li a {
+	padding: .25em .5em;
+	border-radius: .25em;
+}
+
+header nav li a[href]:not(:hover) {
+	text-decoration: none;
+}
+
+header nav li a[data-current="current item"] {
+	background-color: white;
+}
+
+
+/* Posts List */
+article {
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid var(--secondary);
+}
+
+main > section > article > * {
+	margin-top: 0;
+	margin-bottom: .5em;
+}
+
+/* Post Tags */
+a[rel="tag"],
+a[rel="tag"]:visited {
+	display: inline-block;
+  vertical-align: text-top;
+  text-transform: uppercase;
+	letter-spacing: .1em;
+  font-size: .625em;
+  padding: 0 .5em;
+	line-height: 2em;
+	height: 2em;
+  border: 1px solid var(--secondary);
+	background-color: var(--secondary);
+	color: var(--primary);
+  border-radius: .25em;
+  text-decoration: none;
+	margin: 0 .5em .5em 0;
+}
+
+a[rel="tag"]:hover {
+	border: 1px solid var(--primary);
+	background-color: var(--primary);
+	color: var(--secondary);
+}
+
+a[rel="tag"]:last-child {
+	margin-right: 0;
+}
+
+/* Contact Form */
+form {
+  display: grid;
+	padding: 2em 0;
+}
+
+form label {
+  display: none;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+	font-size: 1rem;
+	font-family: "Avenir", "Avenir Next", sans-serif;
+}
+
+input,
+textarea {
+	border: 1px solid black;
+}
+
+button {
+	border: 1px solid var(--primary);
+	background-color: var(--primary);
+	color: var(--secondary);
+	cursor: pointer;
 }
