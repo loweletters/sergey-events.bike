@@ -1,11 +1,11 @@
 @font-face {
   font-family: VaultAlarm-Regular;
-  src: url(fonts/VaultAlarm-Regular.woff2);
+  src: url(/fonts/VaultAlarm-Regular.woff2);
   }
 
 @font-face {
   font-family: SpaceMono-Regular;
-  src: url(fonts/SpaceMono-Regular.woff2);
+  src: url(/fonts/SpaceMono-Regular.woff2);
   }
 
 * {
